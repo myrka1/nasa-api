@@ -3,10 +3,7 @@ package com.stuff.NasaApiJava.controllers;
 import com.stuff.NasaApiJava.models.Picture;
 import com.stuff.NasaApiJava.services.PictureService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
@@ -14,12 +11,15 @@ public class PictureController {
     @Autowired
     PictureService picService;
 
-    //postman of the day
-    @RequestMapping(path="/picture", method= RequestMethod.GET)
+    //daily     localhost:8080/daily
+    @RequestMapping(path="/daily", method= RequestMethod.GET)
     public Picture getPic() {
         return picService.getPicOfDay();
     }
 
-    //postman specific
-
+    //postman specific      localhost:8080/specific/2023-04-01
+    @RequestMapping(path="/specific/{date}", method= RequestMethod.GET)
+    public Picture getSpecific(@PathVariable String date) {
+        return picService.getSpecificDate(date);
+    }
 }
