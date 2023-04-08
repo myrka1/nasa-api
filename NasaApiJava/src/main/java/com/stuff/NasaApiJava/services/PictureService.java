@@ -36,22 +36,7 @@ public class PictureService {
                 String.class
         );
 
-        Picture picture = null;
-        try {
-            ObjectMapper oM = new ObjectMapper();
-            JsonNode jsonNode = oM.readTree(response.getBody());
-            String date = jsonNode.path("date").asText();
-            String explanation = jsonNode.path("explanation").asText();
-            String title = jsonNode.path("title").asText();
-            String image = jsonNode.path("url").asText();
-
-            picture = new Picture(date, explanation, title, image);
-
-        } catch (JsonMappingException e) {
-            throw new RuntimeException(e);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
+        Picture picture = responseToPicture(response);
         return picture;
     }
 
@@ -71,6 +56,11 @@ public class PictureService {
                 String.class
         );
 
+        Picture picture = responseToPicture(response);
+        return picture;
+    }
+
+    public Picture responseToPicture(ResponseEntity<String> response) {
         Picture picture = null;
         try {
             ObjectMapper oM = new ObjectMapper();
@@ -81,14 +71,11 @@ public class PictureService {
             String image = jsonNode.path("url").asText();
 
             picture = new Picture(date, explanation, title, image);
-
         } catch (JsonMappingException e) {
             throw new RuntimeException(e);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
-
         return picture;
     }
-
 }
