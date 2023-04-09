@@ -14,6 +14,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 
+import java.util.ArrayList;
+
 @Component
 public class PictureService {
 
@@ -23,7 +25,8 @@ public class PictureService {
     private RestTemplate restTemplate = new RestTemplate();
 
     //method for pic of the day
-    public Picture getPicOfDay() {
+    public ArrayList<Picture> getPicOfDay() {
+        ArrayList<Picture> pictureList = new ArrayList<>();
         HttpHeaders httpHeaders = new HttpHeaders();
         HttpEntity<String> request = new HttpEntity<>(httpHeaders);
 
@@ -37,11 +40,13 @@ public class PictureService {
         );
         System.out.println("this happens");
         Picture picture = responseToPicture(response);
-        return picture;
+        pictureList.add(picture);
+        return pictureList;
     }
 
     //method for specific date
-    public Picture getSpecificDate(String dateInput) {
+    public ArrayList<Picture> getSpecificDate(String dateInput) {
+        ArrayList<Picture> pictureList = new ArrayList<>();
         HttpHeaders httpHeaders = new HttpHeaders();
         HttpEntity<String> request = new HttpEntity<>(httpHeaders);
 
@@ -57,7 +62,8 @@ public class PictureService {
         );
 
         Picture picture = responseToPicture(response);
-        return picture;
+        pictureList.add(picture);
+        return pictureList;
     }
 
     public Picture responseToPicture(ResponseEntity<String> response) {
