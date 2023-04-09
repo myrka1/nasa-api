@@ -8,5 +8,7 @@ export const BackendService = {
     dailyPicture() {
         return http.get(`/daily`);
     },
-
+    specificPicture(date) {
+        return http.get(`/specific/${date}`);
+    },
 }

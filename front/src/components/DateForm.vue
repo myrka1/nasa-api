@@ -24,7 +24,10 @@
         const month = dateObj.getMonth() + 1
         const day = dateObj.getDate() 
         const date = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`
-        console.log(date)
+        this.selectDate(date);
+      },
+      selectDate(date) {
+        this.$emit('date-selection', date);
       }
     }
   }
@@ -32,7 +35,7 @@
 
 <style>
   button {
-    width: 500px;
+    width: 200px;
     height: 50px;
     /*background-color: #AE00FB ; */
     background-color: rgba(128, 0, 128, 0.5); 
