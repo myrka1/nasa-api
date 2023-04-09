@@ -1,11 +1,13 @@
 <template>
-    <form @submit.prevent="submitForm">
-      <label for="date">Enter a date: </label>
-      <br>
-      <input id="date" name="date" type="date" v-model="dateInput">
-      <br>
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+      <form @submit.prevent="submitForm">
+        <label for="date">Enter a date: </label>
+        <br>
+        <input id="date" name="date" type="date" v-model="dateInput">
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </template>
   
   <script>
@@ -27,3 +29,17 @@
     }
   }
   </script>
+
+<style>
+  button {
+    width: 500px;
+    height: 50px;
+    /*background-color: #AE00FB ; */
+    background-color: rgba(128, 0, 128, 0.5); 
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    font-size: 28px;
+    color: #B5FFD9;
+  }
+</style>

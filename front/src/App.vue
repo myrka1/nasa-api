@@ -1,8 +1,8 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/daily">Picture of the Day</router-link> |
-    <router-link to="/specific">Specific Date Search</router-link> |
+    <router-link to="/">Home</router-link> 
+    <router-link to="/daily">Picture of the Day</router-link> 
+    <router-link to="/specific">Specific Date Search</router-link> 
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
