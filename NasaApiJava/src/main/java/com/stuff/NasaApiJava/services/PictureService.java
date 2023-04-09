@@ -35,7 +35,7 @@ public class PictureService {
                 request,
                 String.class
         );
-
+        System.out.println("this happens");
         Picture picture = responseToPicture(response);
         return picture;
     }
