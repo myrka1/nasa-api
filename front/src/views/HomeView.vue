@@ -33,6 +33,8 @@ export default {
   display: grid;
   grid-template-columns: 3fr 2fr;
   align-items: center;
+  border: 1px solid #3E00FF;
+  height: 100vh;
 }
 aside {
   padding-right: 100px;

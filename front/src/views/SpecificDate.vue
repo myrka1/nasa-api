@@ -1,19 +1,21 @@
 <template>
-  <div class="container">
-    <h1>Search for a specific date here.</h1>
-    <DateForm @date-selection="dateSelected"/>
-  </div>
+  <div class="main-container">
+    <div class="container">
+      <h1>Search for a specific date here.</h1>
+      <DateForm @date-selection="dateSelected"/>
+    </div>
 
-  <div class="display">
-    <div v-for="pic in stuff"
-          v-bind:key="pic.Title"
-          class="info"
-        >
-          <img :src="pic.image" class="photo"/>
-          <h2>{{ pic.title }}</h2> 
-          <strong>Date:</strong> {{ pic.date }} <br>
-          <strong>Explanation:</strong> {{ pic.explanation }}
-        </div>
+    <div class="display">
+      <div v-for="pic in stuff"
+            v-bind:key="pic.Title"
+            class="info"
+          >
+            <img :src="pic.image" class="photo"/>
+            <h2>{{ pic.title }}</h2> 
+            <strong>Date:</strong> {{ pic.date }} <br>
+            <strong>Explanation:</strong> {{ pic.explanation }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -61,5 +63,10 @@ img {
 
 strong {
   text-decoration: underline;
+}
+
+.main-container {
+  border: 1px solid #3E00FF;
+  height: 100vh;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-container">
       <div class="container">
         <h1>NASA Picture of the Day</h1>
         <button v-on:click="atClick" type="submit">Generate</button>
@@ -68,5 +68,10 @@ button {
   margin: 5px;
   font-size: 20px;
   color: #B5FFD9;
+}
+
+.main-container {
+  border: 1px solid #3E00FF;
+  height: 100vh;
 }
 </style>

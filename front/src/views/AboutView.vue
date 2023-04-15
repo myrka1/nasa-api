@@ -18,4 +18,9 @@ p {
   font-size: 28px;
   padding: 10px;
 }
+
+.about {
+  border: 1px solid #3E00FF;
+  height: 100vh;
+}
 </style>
