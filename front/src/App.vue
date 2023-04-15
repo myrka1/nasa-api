@@ -1,8 +1,8 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> 
-    <router-link to="/daily">Picture of the Day</router-link> 
-    <router-link to="/specific">Specific Date Search</router-link> 
+    <router-link to="/daily">Daily Picture</router-link> 
+    <router-link to="/specific">Date Search</router-link> 
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
@@ -33,17 +33,20 @@ body {
 }
 
 nav {
-  padding: 30px;
+  padding: 10px 10px 15px 10px;
   display: flex;
   font-size: 20px;
   justify-content: flex-start;
+  border-bottom: 1px solid #3E00FF ;
+  margin-bottom: 5px;
 }
 
 nav a {
   font-weight: bold;
   color: #B5FFD9;
-  padding: 5px;
   text-decoration: none;
+  margin: 10px;
+  flex-basis: 10%;
 }
 
 nav a.router-link-exact-active {

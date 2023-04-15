@@ -59,4 +59,14 @@ img {
 strong {
   text-decoration: underline;
 }
+
+button {
+  width: 225px;
+  height: 35px;
+  background-color: rgba(128, 0, 128, 0.5); 
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 20px;
+  color: #B5FFD9;
+}
 </style>

@@ -3,7 +3,7 @@
       <form @submit.prevent="submitForm">
         <label for="date">Enter a date: </label>
         <br>
-        <input id="date" name="date" type="date" v-model="dateInput">
+        <input id="date" name="date" type="date" v-model="dateInput" class="date-input">
         <br>
         <button type="submit">Submit</button>
       </form>
@@ -35,14 +35,24 @@
 
 <style>
   button {
-    width: 200px;
-    height: 50px;
-    /*background-color: #AE00FB ; */
+    width: 225px;
+    height: 35px;
     background-color: rgba(128, 0, 128, 0.5); 
-    border-radius: 10px;
-    border: none;
-    margin: 10px;
-    font-size: 28px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 20px;
     color: #B5FFD9;
+  }
+
+  label {
+    font-size: 25px;
+    color: #B5FFD9;
+  }
+
+  .date-input {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 200px;
   }
 </style>

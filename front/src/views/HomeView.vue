@@ -1,12 +1,11 @@
 <template>
   <div class="home">
-    <h1>This is the home page.</h1>
     <div class="container">
       <img class="round-img" alt="moon photo" src="../assets/round-moon.jpg"> 
       <aside>
-        <button @click="toDailyPage" id="daily-button" type="submit">Picture of the Day</button>
+        <button @click="toDailyPage" id="daily-button" type="submit">Generate Picture of the Day</button>
         <br>
-        <button @click="toSpecificPage" id="specific-button" type="submit">Specific Day</button>
+        <button @click="toSpecificPage" id="specific-button" type="submit">Search for Specific Date</button>
       </aside>
     </div>
   </div>
@@ -36,7 +35,8 @@ export default {
   align-items: center;
 }
 aside {
-  padding-right: 45px;
+  padding-right: 100px;
+  padding-top: 70px;
 }
 
 button {
@@ -45,7 +45,6 @@ button {
   /*background-color: #AE00FB ; */
   background-color: rgba(128, 0, 128, 0.5); 
   border-radius: 20px;
-  border: none;
   margin: 10px;
   font-size: 28px;
   color: #B5FFD9;
