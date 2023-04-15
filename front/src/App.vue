@@ -37,7 +37,7 @@ nav {
   display: flex;
   font-size: 20px;
   justify-content: flex-start;
-  border-bottom: 1px solid #3E00FF ;
+  border: 1px solid #3E00FF ;
   margin-bottom: 5px;
 }
 
