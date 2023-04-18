@@ -1,4 +1,7 @@
 <template>
+  <div class="footer">
+    <p>An emwaiarkayeii production.</p>
+  </div>
   <nav>
     <router-link to="/">Home</router-link> 
     <router-link to="/daily">Daily Picture</router-link> 
@@ -51,5 +54,16 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #AE00FB;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #3E00FF;
 }
 </style>

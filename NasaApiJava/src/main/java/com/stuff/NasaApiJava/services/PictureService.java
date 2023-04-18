@@ -24,13 +24,11 @@ public class PictureService {
 
     private RestTemplate restTemplate = new RestTemplate();
 
-    //method for pic of the day
     public ArrayList<Picture> getPicOfDay() {
         ArrayList<Picture> pictureList = new ArrayList<>();
         HttpHeaders httpHeaders = new HttpHeaders();
         HttpEntity<String> request = new HttpEntity<>(httpHeaders);
 
-        //https://api.nasa.gov/planetary/apod?api_key= + API_Key
         String url = "https://api.nasa.gov/planetary/apod?api_key=" + key;
         ResponseEntity<String> response = restTemplate.exchange(
                 url,
@@ -38,7 +36,6 @@ public class PictureService {
                 request,
                 String.class
         );
-        System.out.println("this happens");
         Picture picture = responseToPicture(response);
         pictureList.add(picture);
         return pictureList;
